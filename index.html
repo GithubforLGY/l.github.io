@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-   
+ 
 <title>无标题文档</title>
 
 
@@ -459,7 +459,7 @@ top:25%;
 #t1{
 	width:600px;
 	height:400px;
-	top:60%;
+	top:50%;
 	position:relative;
 	font-weight:bold;
 	right:calc(16% - 200px);
@@ -737,8 +737,8 @@ function move(){
 		var screenwidth=screen.width;
     
                 
-if(screenwidth>"1200"){
-            
+
+      if(screenwidth>"1200"){      
         $("#left").animate({
 		"margin-left":-k*0.6
 
@@ -764,9 +764,9 @@ if(screenwidth>"1200"){
         
              }
            
-     
+     if(screenwidth<="1200"){
          
-         if(screenwidth<="1200"){
+         
             $("#right").css("top","50%");
             $("#left").animate({
 		"margin-left":0
