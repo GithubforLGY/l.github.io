@@ -737,7 +737,7 @@ function move(){
 		var screenwidth=screen.width;
     
                 
-if(screenwidth<="1200"){
+if(screenwidth>"1200"){
             
         $("#left").animate({
 		"margin-left":-k*0.6
@@ -766,7 +766,7 @@ if(screenwidth<="1200"){
            
      
          
-         if(screenwidth>"1200"){
+         if(screenwidth<="1200"){
             $("#right").css("top","50%");
             $("#left").animate({
 		"margin-left":0
