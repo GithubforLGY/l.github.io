@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-<title>哈哈哈哈哈哈</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>无标题文档</title>
 
 
 
@@ -424,6 +424,72 @@ transform:translate(-50%,-50%);
            position: relative;
 top:25%;
    }
+ #left{
+	background:#FFF;
+	width:100%;
+	height:100%;
+	position:relative;
+     margin-top:-50%;
+	transform: rotate(20deg);
+	-ms-transform: rotate(20deg);	 
+	-webkit-transform: rotate(20deg);	
+	-o-transform: rotate(20deg);	
+	-moz-transform: rotate(20deg);	
+	float:left;
+	
+	z-index:1;	 
+	}
+#right{
+	position:relative;
+	background:#2b2a2a;/*#2b2a2a;*/
+	width:120%;
+	height:100%;
+    margin-top:-20%;
+    transform: rotate(20deg);
+	-ms-transform: rotate(20deg);	 
+	-webkit-transform: rotate(20deg);	
+	-o-transform: rotate(20deg);	
+	-moz-transform: rotate(20deg);
+	
+	z-index:0;	
+	}
+       
+ 
+       
+#t1{
+	width:600px;
+	height:400px;
+	top:50%;
+	position:relative;
+	font-weight:bold;
+	right:calc(16% - 200px);
+	font-family:"fz";
+	font-size:22px;
+	transform: rotate(-20deg);
+	-ms-transform: rotate(-20deg);	 
+	-webkit-transform: rotate(-20deg);	
+	-o-transform: rotate(-20deg);	
+	-moz-transform: rotate(-20deg);
+    background-image: url(images/works/5.png);
+	float:right;}
+#t2{
+	width:600px;
+	height:400px;
+	position:relative;
+	font-family:"fz";
+	color:#FFF;
+	top:-30%;
+    background-image:url(images/works/6.png);
+	left:calc(25% - 200px);
+	font-size:22px;
+	float:left;transform: rotate(-20deg);
+	-ms-transform: rotate(-20deg);	 
+	-webkit-transform: rotate(-20deg);	
+	-o-transform: rotate(-20deg);	
+	-moz-transform: rotate(-20deg);	
+}       
+       
+       
        
              } 
     
@@ -651,7 +717,7 @@ function clean(){
 	}
 function cleaning(){
 	if(j!=-1){
-		$("#work").css("margin-left","calc(60% - 527.5px)");
+		$("#work").css("left","50%");
 		$("#works1").css("opacity","0");
 		$("#works2").css("opacity","0");
 		$("#works3").css("opacity","0");
@@ -668,12 +734,19 @@ function cleaning(){
 	
 	}
 function move(){
-		
-	$("#left").animate({
+		var screenwidth=screen.width;
+    
+                
+
+            
+        $("#left").animate({
 		"margin-left":-k*0.6
+
+
 		},1500,"easeInOutQuint");
-	$("#right").animate({
+	   $("#right").animate({
 		"margin-left":k*0.4
+
 		},1500,"easeInOutQuint",function(){
 			$("#about img").stop().animate({
 				opacity:1,
@@ -682,9 +755,45 @@ function move(){
 					$("#name").stop().animate({
 						opacity:1
 						},100)
-					});
+					}); 
+        
+    
+	
 			});
-	}
+        
+        
+             }
+           
+     if(screenwidth<="1200"){
+         
+         if(screenwidth>"1200"){
+            $("#right").css("top","50%");
+            $("#left").animate({
+		"margin-left":0
+		},1500,"easeInOutQuint");
+        
+	   $("#right").animate({
+		"margin-left":0
+		},1500,"easeInOutQuint",function(){
+			$("#about img").stop().animate({
+				opacity:1,
+				"margin-left":0
+				},function(){
+					$("#name").stop().animate({
+						opacity:1
+						},100)
+					}); 
+        
+    
+	
+			});
+         
+     }  
+       
+	
+    
+    
+    }
 </script>
 </body>
 </html>
