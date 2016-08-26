@@ -1,7 +1,25 @@
 // JavaScript Document
-$(function(){
- 
-    function browserRedirect() {
+window.j=0;
+	var jj;
+	window.i=$("body,html").height();
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function browserRedirect() {
             var sUserAgent = navigator.userAgent.toLowerCase();
             var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
             var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
@@ -11,71 +29,82 @@ $(function(){
             var bIsAndroid = sUserAgent.match(/android/i) == "android";
             var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
             var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
-            
+          
             if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+                //手机端滑轮事件
                 
-                $('body').on('touchstart', '#gallerySlider img', function(e) {
-                    var touch = e.originalEvent,
-                        startX = touch.changedTouches[0].pageX;
-                        startY = touch.changedTouches[0].pageY;
-                        slider.on('touchmove', function(e) {
-                        e.preventDefault();
-                        touch = e.originalEvent.touches[0] ||
-                        e.originalEvent.changedTouches[0];
-                        if (touch.pageX - startX > 10) {
-                        alert("右划");
-                        slider.off('touchmove');
-                        showPrevious();
-                        } else if (touch.pageX - startX < -10) {
-                        alert("左划");
-                        slider.off('touchmove');
-                        showNext();
-                        };
-                        if (touch.pageY - startY > 10) {
-                        alert("下划");
-                        } else if (touch.pageY - startY < -10) {
-                        alert("上划");
-                        };
-                        });
-                
-            } else {
-                alert("pc");
-            }
-        }
-
-        browserRedirect();
-    
-    
-    
-    
-  
-    
-    
-    
-    
+                //返回角度  
+          function GetSlideAngle(dx, dy) {  
+              returnMath.atan2(dy, dx) * 180 / Math.PI;  
+          }  
    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
- window.j=0;
-	var jj;
-	window.i=$("body,html").height();
-	
-	 var scrollFunc = function (e) {
-	   var direct = 0;
-        e = e || window.event; 
+          //根据起点和终点返回方向 1：向上，2：向下，3：向左，4：向右,0：未滑动  
+          function GetSlideDirection(startX, startY, endX, endY) {  
+              var dy = startY - endY;  
+              var dx = endX - startX;  
+              varresult = 0;  
+   
+              //如果滑动距离太短  
+              if(Math.abs(dx) < 2 && Math.abs(dy) < 2) {  
+                  returnresult;  
+              }  
+   
+              varangle = GetSlideAngle(dx, dy);  
+              if(angle >= -45 && angle < 45) {  
+                  result = 4;  
+              }else if (angle >= 45 && angle < 135) {  
+                  result = 1;  
+              }else if (angle >= -135 && angle < -45) {  
+                  result = 2;  
+              }  
+              else if ((angle >= 135 && angle <= 180) || (angle >= -180 && angle < -135)) {  
+                  result = 3;  
+              }  
+   
+              returnresult;  
+          }  
+   
+          //滑动处理  
+          var startX, startY;  
+          document.addEventListener('touchstart',function (ev) {  
+              startX = ev.touches[0].pageX;  
+              startY = ev.touches[0].pageY;    
+          }, false);  
+          document.addEventListener('touchend',function (ev) {  
+              var endX, endY;  
+              endX = ev.changedTouches[0].pageX;  
+              endY = ev.changedTouches[0].pageY;  
+              var direction = GetSlideDirection(startX, startY, endX, endY);  
+              switch(direction) {  
+                  case 0:  
+                      alert("没滑动");  
+                      break;  
+                  case 1:  
+                      alert("向上");  
+                      break;  
+                  case 2:  
+                      alert("向下");  
+                      break;  
+                  case 3:  
+                      alert("向左");  
+                      alert("!");  
+                      break;  
+                  case 4:  
+                      alert("向右");  
+                      break;  
+                  default:             
+              }  
+          }, false); 
+                
+                
+                
+                
+            } else {//PC端滑轮事件
+                
+                $(function(){
+            var scrollFunc = function (e) {
+	        var direct = 0;
+            e = e || window.event; 
        if(tur==true){
 			clean();
 			var lll=j*-1;
@@ -262,7 +291,37 @@ else{}
     window.onmousewheel = document.onmousewheel = scrollFunc; 
 	
 	})
-	
+                
+            }
+        }
+
+        browserRedirect();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 var tur = true;
 function haha(){ tur = true;
 
