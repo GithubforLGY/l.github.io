@@ -21,7 +21,6 @@
     url(font/fz.svg) format("svg");
 	font-weight: normal;
     font-style: normal;
-
 	
 	}
 *{
@@ -32,7 +31,6 @@ body,html{
 	width:100%;
 	overflow:hidden;
 	margin:0;}
-
 	#body{ 
 		margin-top:0px;
 		width:100%;
@@ -65,7 +63,6 @@ body,html{
 	height:90%;
 	background:#373b52;
 	font-family:"fz";
-
 	}
 #footer{
 	width:100%;
@@ -147,7 +144,6 @@ body,html{
 	background:#666;
 	cursor:pointer;}
 #borderhead{
-
 	margin:0 auto;
 	margin-top:calc(50% - 100px);
 	background:#000;
@@ -162,7 +158,6 @@ body,html{
 	z-index:1;
 	overflow:hidden;
 	}
-
 #myct{
 	float:left;
 	margin-top:5%;
@@ -269,7 +264,6 @@ transform:translate(-50%,-50%);
 	background:#FFF;
 	position:absolute;
 	opacity:0;
-
 	}
 #t1{
 	width:600px;
@@ -347,7 +341,6 @@ transform:translate(-50%,-50%);
 #poin li:hover{
 	cursor:pointer;}
     
-
     
     
     
@@ -361,44 +354,42 @@ transform:translate(-50%,-50%);
     
    @media screen and (max-width:1200px){
            
-       #main-pic{
+#main-pic{
 	
-	background:url(images/38.jpg) no-repeat;
+	           background:url(images/38.jpg) no-repeat;
 	}
        
-    #works1,#works2,#works3,#works4{
-	width:300px;
-	float:left;
-	height:201px;
-	opacity:0;
-	
+ #works1,#works2,#works3,#works4{
+                width:300px;
+                float:left;
+                height:201px;
+                opacity:0;
+
 	}
-       #works1{
-    background-image: url(images/works/works2-1.png);
+#works1{
+         background-image: url(images/works/works2-1.png);
 	}
 #works2{
-    background-image: url(images/works/works4-1.png);
+        background-image: url(images/works/works4-1.png);
 	}
 #works3{
-    background-image: url(images/works/works1-1.png);
+        background-image: url(images/works/works1-1.png);
 	}
 #works4{
-    background-image: url(images/works/works3-1.png);
+        background-image: url(images/works/works3-1.png);
 	}
        
-         #work{
-	position:relative;
-	height:417px;
+    #work{
+                    position:relative;
+                    height:417px;
   
-
-top:50%;
-left:50%;
-transform:translate(-50%,-50%);
--webkit-transform:translate(-50%,-50%);
--moz-transform:translate(-50%,-50%);
--ms-transform:translate(-50%,-50%);
-
-	width:615px;
+                    top:50%;
+                    left:50%;
+                    transform:translate(-50%,-50%);
+                    -webkit-transform:translate(-50%,-50%);
+                    -moz-transform:translate(-50%,-50%);
+                    -ms-transform:translate(-50%,-50%);
+                        width:615px;
 }  
        
        #t1{
@@ -422,14 +413,15 @@ transform:translate(-50%,-50%);
        }
        #num{
            position: relative;
-top:25%;
+            top:25%;
    }
  #left{
 	background:#FFF;
 	width:100%;
 	height:100%;
 	position:relative;
-     margin-top:-60%;
+     margin-top: -60%;
+     
 	transform: rotate(20deg);
 	-ms-transform: rotate(20deg);	 
 	-webkit-transform: rotate(20deg);	
@@ -444,13 +436,14 @@ top:25%;
 	background:#2b2a2a;/*#2b2a2a;*/
 	width:120%;
 	height:100%;
-    margin-top:-20%;
+    margin-top: -20%;
+    
     transform: rotate(20deg);
 	-ms-transform: rotate(20deg);	 
 	-webkit-transform: rotate(20deg);	
 	-o-transform: rotate(20deg);	
 	-moz-transform: rotate(20deg);
-	
+
 	z-index:0;	
 	}
        
@@ -488,19 +481,25 @@ top:25%;
 	-o-transform: rotate(-20deg);	
 	-moz-transform: rotate(-20deg);	
 }       
- #back{margin-left: -100%;
+       
+       #back{margin-left: -100%;
            width:100%;
            height: 100%;
        }      
- #main-pic{
+       
+       #main-pic{
            background-image: url(images/38-1.jpg);
            
-       }             
+       }    
+       
+       
+       
+       
+       
        
        
              } 
     
-
     
     
     
@@ -602,7 +601,6 @@ linsforgg
 <script src="JQ,JS/ease.js"></script>
 <script src="JQ,JS/indexscroll.js"></script>
 <script language="javascript">
-
 /*$("#works #a1").hover(function(){
 	$(this).stop().animate({opacity:0.98});
 	},function(){
@@ -640,7 +638,6 @@ function aa(){
 	
 	$("#poin li img").attr("src","images/works/p2.png");
 	$("#poin li img").eq(kkk).attr("src","images/works/p1.png");
-
 	
 	$("#body").stop().animate({
 						"margin-top":kkk*-i
@@ -672,7 +669,6 @@ $("#poin li").bind("click", function(){
 	
 	$("#poin li img").attr("src","images/works/p2.png");
 	$("#poin li img").eq(kkk).attr("src","images/works/p1.png");
-
 	
 	$("#body").stop().animate({
 						"margin-top":kkk*-i
@@ -716,9 +712,7 @@ function works(){
 			})
 			}	)
 			}	)*/
-
 }
-
 function clean(){
 	var www=setTimeout(cleaning,1000);
 	}
@@ -744,16 +738,12 @@ function move(){
 		var screenwidth=screen.width;
     
                 
-
       if(screenwidth>"1200"){      
         $("#left").animate({
 		"margin-left":-k*0.6
-
-
 		},1500,"easeInOutQuint");
 	   $("#right").animate({
 		"margin-left":k*0.4
-
 		},1500,"easeInOutQuint",function(){
 			$("#about img").stop().animate({
 				opacity:1,
