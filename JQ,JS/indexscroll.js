@@ -1,63 +1,25 @@
 // JavaScript Document
 $(function(){
  
-    function browserRedirect() { 
+    function browserRedirect() {
+            var sUserAgent = navigator.userAgent.toLowerCase();
+            var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+            var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+            var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+            var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+            var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+            var bIsAndroid = sUserAgent.match(/android/i) == "android";
+            var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+            var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+            
+            if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+                alert("phone");
+            } else {
+                alert("pc");
+            }
+        }
 
-var sUserAgent= navigator.userAgent.toLowerCase(); 
-
-var bIsIpad= sUserAgent.match(/ipad/i) == "ipad"; 
-
-var bIsIphoneOs= sUserAgent.match(/iphone os/i) == "iphone os"; 
-
-var bIsMidp= sUserAgent.match(/midp/i) == "midp"; 
-
-var bIsUc7= sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4"; 
-
-var bIsUc= sUserAgent.match(/ucweb/i) == "ucweb"; 
-
-var bIsAndroid= sUserAgent.match(/android/i) == "android"; 
-
-var bIsCE= sUserAgent.match(/windows ce/i) == "windows ce"; 
-
-var bIsWM= sUserAgent.match(/windows mobile/i) == "windows mobile"; 
-
- 
-
-if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) { 
-$('body').on('touchstart', '#gallerySlider img', function(e) {
-var touch = e.originalEvent,
-startX = touch.changedTouches[0].pageX;
-startY = touch.changedTouches[0].pageY;
-slider.on('touchmove', function(e) {
-e.preventDefault();
-touch = e.originalEvent.touches[0] ||
-e.originalEvent.changedTouches[0];
-if (touch.pageX - startX > 10) {
-console.log("右划");
-slider.off('touchmove');
-showPrevious();
-} else if (touch.pageX - startX < -10) {
-console.log("左划");
-slider.off('touchmove');
-showNext();
-};
-if (touch.pageY - startY > 10) {
-console.log("下划");
-} else if (touch.pageY - startY < -10) {
-console.log("上划");
-};
-});
-
-
-} else { 
-
-alert("PC")
-
-} 
-
-} 
-
-browserRedirect(); 
+        browserRedirect();
     
     
     
