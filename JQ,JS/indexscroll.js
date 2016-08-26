@@ -24,8 +24,30 @@ var bIsWM= sUserAgent.match(/windows mobile/i) == "windows mobile";
  
 
 if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) { 
+$('body').on('touchstart', '#gallerySlider img', function(e) {
+var touch = e.originalEvent,
+startX = touch.changedTouches[0].pageX;
+startY = touch.changedTouches[0].pageY;
+slider.on('touchmove', function(e) {
+e.preventDefault();
+touch = e.originalEvent.touches[0] ||
+e.originalEvent.changedTouches[0];
+if (touch.pageX - startX > 10) {
+console.log("右划");
+slider.off('touchmove');
+showPrevious();
+} else if (touch.pageX - startX < -10) {
+console.log("左划");
+slider.off('touchmove');
+showNext();
+};
+if (touch.pageY - startY > 10) {
+console.log("下划");
+} else if (touch.pageY - startY < -10) {
+console.log("上划");
+};
+});
 
-alert("moblie")
 
 } else { 
 
