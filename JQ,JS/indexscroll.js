@@ -33,10 +33,31 @@ function browserRedirect() {
             if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
                 //手机端滑轮事件
                 
+<<<<<<< HEAD
                 //返回角度  
           function GetSlideAngle(dx, dy) {  
               returnMath.atan2(dy, dx) * 180 / Math.PI;  
           }  
+=======
+                $('body').on('touchstart', '#gallerySlider img', function(e) {
+                   alert("moblie")
+                
+            } else {
+                alert("pc");
+            }
+        }
+
+        browserRedirect();
+    
+    
+    
+    
+  
+    
+    
+    
+    
+>>>>>>> origin/gh-pages
    
           //根据起点和终点返回方向 1：向上，2：向下，3：向左，4：向右,0：未滑动  
           function GetSlideDirection(startX, startY, endX, endY) {  
