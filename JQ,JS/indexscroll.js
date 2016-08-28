@@ -79,7 +79,7 @@ document.addEventListener('touchend', function (ev) {
     var direction = GetSlideDirection(startX, startY, endX, endY);
     switch (direction) {
         case 0:
-            alert("没滑动");
+            //没有滑动
             break;
             
         case 1://向上滑动
@@ -154,10 +154,10 @@ document.addEventListener('touchend', function (ev) {
             break;
             
         case 3:
-            alert("向左");
+            //向左滑动
             break;
         case 4:
-            alert("向右");
+            //向右滑动
             break;
         default:            
     }   
