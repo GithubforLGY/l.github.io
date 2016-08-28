@@ -81,12 +81,69 @@ document.addEventListener('touchend', function (ev) {
         case 0:
             alert("没滑动");
             break;
-        case 1:
-            alert("向上");
+            
+        case 1://向上滑动
+            if(j==0){}
+			$("#poin img").attr("src","images/works/p2.png");
+				
+			if(j==-1){
+				$("#body").stop().animate({
+						"margin-top":0
+						},1000,"easeInOutQuint")
+						var timer=setTimeout(haha,1000); tur = false;
+						$("#poin img").eq(0).attr("src","images/works/p1.png");
+				j=0;
+				}
+			if(j==-2){
+				$("#body").stop().animate({
+						"margin-top":-i
+						},1000,"easeInOutQuint",works)
+						var timer=setTimeout(haha,1000); tur = false; 
+				j=-1;$("#poin img").eq(1).attr("src","images/works/p1.png");
+				}	
+             if(j==-3){
+				 move();
+				$("#body").stop().animate({
+						"margin-top":2*-i
+						},1000,"easeInOutQuint")
+						var timer=setTimeout(haha,1000); tur = false; 
+				j=-2;$("#poin img").eq(2).attr("src","images/works/p1.png");
+				}
             break;
-        case 2:
-            alert("向下");
+            
+        case 2://向下滑动
+            
+            
+            $("#poin img").attr("src","images/works/p2.png");
+				if(j==-3){
+					
+					}
+				if(j==-2){
+					$("#body").stop().animate({
+						"margin-top":3*-i
+						},1000,"easeInOutQuint")
+						var timer=setTimeout(haha,1000); tur = false; 
+						j=-3;
+						$("#poin img").eq(3).attr("src","images/works/p1.png");
+					}
+				if(j==-1){ move();
+					$("#body").stop().animate({
+						"margin-top":2*-i
+						},1000,"easeInOutQuint")
+						var timer=setTimeout(haha,1000); tur = false; 
+						j=-2;
+						$("#poin img").eq(2).attr("src","images/works/p1.png");
+					}
+				if(j==0){
+					j=-1;
+					$("#body").stop().animate({
+						"margin-top":-i
+						},1000,"easeInOutQuint",works)
+						var timer=setTimeout(haha,1000); tur = false; 
+						$("#poin img").eq(1).attr("src","images/works/p1.png");
+					}
             break;
+            
         case 3:
             alert("向左");
             break;
