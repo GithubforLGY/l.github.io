@@ -83,7 +83,7 @@ document.addEventListener('touchend', function (ev) {
             break;
             
         case 1://向上滑动
-            
+            clean();
             
             $("#poin img").attr("src","images/works/p2.png");
 				if(j==-3){
@@ -120,7 +120,7 @@ document.addEventListener('touchend', function (ev) {
             
         case 2://向下滑动
             
-            
+            clean();
             
             if(j==0){}
 			$("#poin img").attr("src","images/works/p2.png");
