@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>index</title>
+ <link href="css/styel.css" rel="stylesheet" type="text/css">
+ </head>
+<script language="javascript" src="js/jquery-1.11.1.min.js"></script>
+<script>
+window.onscroll = function(){ 
+    var t = document.documentElement.scrollTop || document.body.scrollTop;  
+	if(t>300){
+		$("#TTop").fadeIn();
+		$("#top_bg").css({"background":"#fff","box-shadow":"0 0 5px rgba(0,0,0,0.3)","-webkit-transition":"all ease-in-out 0.2s","-moz-transition":"all ease-in-out 0.2s","-o-transition":"all ease-in-out 0.2s"})
+		$("#menu a").addClass("mu_a")
+	}else{
+		$("#TTop").hide();
+		$("#top_bg").css({"background":"none","box-shadow":"none"})
+		$("#menu a").removeClass("mu_a")
+	}
+} 
+$(function(){
+	$("#banner .info").delay(400).animate({"margin-left":"10%","opacity":"1"},1500);
+	$(".bn_more").delay(1200).animate({"margin-top":"130px","opacity":"1"},1500);
+
+	$(".ps").hover(function(){
+		$(this).find(".wtext").stop().animate({"margin-top":"-50px"},400)
+		},function(){
+			$(".wtext").stop().animate({"margin-top":"-5px"},400)
+			});
+			
+		$(".k").hover(function(){
+			$(this).css("background","#4cc")
+			$(this).find(".aa").css("background-position-y","-76px")
+			$(this).find("h3").css("color","#fff")
+			$(this).find(".k_border").css("background","#fff")
+			$(this).find("p").css("color","#fff")
+			$(this).find(".k_more a").css({"background":"#FFF","color":"#4cc"})
+			},function(){
+				$(this).css("background","#fff")
+				$(this).find(".aa").css("background-position-y","0px")
+				$(this).find("h3").css("color","#454545")
+				$(this).find(".k_border").css("background","#3cc")
+				$(this).find("p").css("color","#999")
+				$(this).find(".k_more a").css({"background":"#39c9da","color":"#fff"})
+				})	
+			
+			
+			
+	$(".t1").click(function(){
+	  $("body").stop().animate({"scrollTop":"0px"},1000)
+	});
+	$(".t2, .bn_btn").click(function(){
+	  $("body").stop().animate({"scrollTop":"480px"},1000)
+	});
+	$(".t3").click(function(){
+	  $("body").stop().animate({"scrollTop":"950px"},1000)
+	});
+	$(".t4").click(function(){
+	  $("body").stop().animate({"scrollTop":"1910px"},1000)
+	});
+	$(".t5").click(function(){
+	  $("body").stop().animate({"scrollTop":"2600px"},1000)
+	});
+})
+</script>
+
+<style type="text/css">	
+</style>
+<body>
+<div id="top_bg">
+  <div id="top">
+      <div id="logo"><img src="images/logo.png"   alt=""/></div>
+      <div id="menu">
+          <ul>
+              <li class="t1"><a href="#this">首页</a></li>
+              <li class="t2"><a href="#this">关于我们</a></li>
+              <li class="t3"><a href="#this">产品展示</a></li>
+              <li class="t4"><a href="#this">服务</a></li>
+              <li class="t5"><a href="#this">联系我们</a></li>
+          </ul>
+      </div>
+  </div>
+</div>
+<div id="banner">
+	<div class="info"><p><span style="font-size:20px;line-height:1.8;color:#fff;font-weight:500"> Aventador LP-700</span><br>本标签文本标签标签文本标本标签文本标签文本标签文本标签本标签文本标签标签文本标本标签文本标签文本标签文本标签本标签文本标签标签文本标本标签文本标签文本标签文本标签本标签文本标签标签文本标本标签文本标签文本标签文本标签</p></div>
+    <div class="bn_more"><a class="bn_btn" href="#">了解我们</a></div>
+</div>
+<div id="container_bg">
+	<div id="container">
+      <div id="ab_us">
+          <h2 class="text_C">关于我们 <span class="text_Cspan">About Us</span></h2>
+          <p class="text_Cbt">文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签</p>
+          <div class="abxx">
+            <div class="abxx_left"><img src="images/pic_1.png"></div>
+            <div class="abxx_right">
+                  <h2 class="text_L">一个好长好长的企业的公司名称</h2>
+                  <div class="border"></div>
+                  <p class="text_L">文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签</p>
+                  <p class="text_L">文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签</p>
+                  <div class="lj_more"><a href="#">了解更多</a></div>
+            </div>
+          </div>
+      </div>
+	</div>
+    <div id="products_bg">
+        <div id="products">
+              <h2 class="text_C">产品展示 <span class="text_Cspan">Product Exhibition</span></h2>
+              <p class="text_Cbt">文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签</p>
+              <ul class="cp">
+                <li>
+                    <div class="ps">
+                        <div class="pic"><img src="images/4.jpg" alt=""/></div>
+                        <div class="wtext"><h3>LP 750-4 Superveloce</h3><p class="wtext_j">本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文</p>
+                          <div class="wtext_left"><a href="#">了解更多</a></div>
+                            <div class="wtext_right"><img src="images/wtext_right.png" alt=""/></div>
+                      </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="ps">
+                        <div class="pic"><img src="images/4.jpg" alt=""/></div>
+                        <div class="wtext"><h3>LP 750-4 Superveloce</h3><p class="wtext_j">本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文</p>
+                        <div class="wtext_left"><a href="#">了解更多</a></div>
+                            <div class="wtext_right"><img src="images/wtext_right.png" alt=""/></div>
+                            </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="ps">
+                        <div class="pic"><img src="images/4.jpg" alt=""/></div>
+                        <div class="wtext"><h3>LP 750-4 Superveloce</h3><p class="wtext_j">本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文</p>
+                        <div class="wtext_left"><a href="#">了解更多</a></div>
+                            <div class="wtext_right"><img src="images/wtext_right.png" alt=""/></div>
+                            </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="ps">
+                        <div class="pic"><img src="images/4.jpg" alt=""/></div>
+                        <div class="wtext"><h3>LP 750-4 Superveloce</h3><p class="wtext_j">本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文</p>
+                        <div class="wtext_left"><a href="#">了解更多</a></div>
+                            <div class="wtext_right"><img src="images/wtext_right.png" alt=""/></div>
+                            </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="ps">
+                        <div class="pic"><img src="images/4.jpg" alt=""/></div>
+                        <div class="wtext"><h3>LP 750-4 Superveloce</h3><p class="wtext_j">本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文</p>
+                        <div class="wtext_left"><a href="#">了解更多</a></div>
+                            <div class="wtext_right"><img src="images/wtext_right.png" alt=""/></div>
+                            </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="ps">
+                        <div class="pic"><img src="images/4.jpg" alt=""/></div>
+                        <div class="wtext">
+                          <h3>LP 750-4 Superveloce</h3>
+                          <p class="wtext_j">本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文</p>
+                          <div class="wtext_left"><a href="#">了解更多</a></div>
+                            <div class="wtext_right"><img src="images/wtext_right.png" alt=""/></div>
+                            </div>
+                    </div>
+                </li>
+              </ul>
+              <div class="cp_more"><a href="#">查看更多</a></div>
+        </div>
+    </div>
+    <div id="services_bg">
+    	<div id="services">
+        	<h2 class="text_C">我们的服务 <span class="text_Cspan">Services</span></h2>
+            <p class="text_Cbt">文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签</p>
+            <div class="services_k">
+            	<ul>
+                	<li>
+                        <div class="k">
+                       		<div class="k_a aa"></div>
+                        	<h3>仪表盘</h3>
+                            <div class="k_border"></div>
+                            <p>本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签签文本标签文本标签文本标签文本标签文本标签签文本标签文本标签文本标签文本标签文本标签</p>
+                            <div class="k_more"><a href="#">查看更多</a></div>
+                        </div>
+                    </li>
+                   <li>
+                        <div class="k">
+                       		<div class="k_b aa"></div>
+                        	<h3>强韧车轴</h3>
+                            <div class="k_border"></div>
+                            <p>本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签签文本标签文本标签文本标签文本标签文本标签签文本标签文本标签文本标签文本标签文本标签</p>
+                            <div class="k_more"><a href="#">查看更多</a></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="k">
+                       		<div class="k_c aa"></div>
+                        	<h3>钢制齿轮</h3>
+                            <div class="k_border"></div>
+                            <p>本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签签文本标签文本标签文本标签文本标签文本标签签文本标签文本标签文本标签文本标签文本标签</p>
+                            <div class="k_more"><a href="#">查看更多</a></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="k">
+                       		<div class="k_d aa"></div>
+                        	<h3>超大油量</h3>
+                            <div class="k_border"></div>
+                            <p>本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签签文本标签文本标签文本标签文本标签文本标签签文本标签文本标签文本标签文本标签文本标签</p>
+                            <div class="k_more"><a href="#">查看更多</a></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div id="margin"></div>
+        </div>
+    </div>
+    <div id="contact_bg">
+    	<div id="contact">
+        	<h2 class="text_C">联系我们 <span class="text_Cspan">Contact Us</span></h2>
+            <p class="text_Cbt">文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签文本标签</p>
+            <div class="c_">
+                <div class="c_left">
+                    <h2>公司信息</h2>
+                    <div class="border"></div>
+                    <p class="c_info">文本标签文本标签文本标签文本标签文文本标签文本标签文本标签文本标签文文本标签文本标签文本标签文本标签文文本标签文本标签文本标签文本标签文文本标签文本标签文本标签文本标签文文本标签文本标签文本标签文本标签文文本标签文本标签文本标签文本标签文文本标签文本标签文本标签文本标签文文本标签文本标签文本标签文本标签文文本标签文本标签文本标签文本标签文文本标签文本标签文本标签文本标签文文本标签文本标签文本标签文本标签文</p>
+                    <h2>联系方式</h2>
+					 <div class="border"></div>
+                    <ul>
+                        <li>联系人：林桂洋</li>
+                        <li>电话：13798962186</li>
+                        <li>邮箱：774266203@qq.com</li>
+                        <li>地址：广东省深圳市南山区</li>
+                    </ul>
+                </div>
+                <div class="c_right">
+                	<form>
+					<input type="text" placeholder="请添写您的姓名..." required>
+					<input type="text" placeholder="请添写您的邮箱地址..." required>
+					<textarea placeholder="关于的话题..." required></textarea>
+					<textarea class="text" placeholder="内容填写..." required></textarea>
+					<input type="submit" value="发送留言">
+				</form>
+                </div>
+            </div>
+            <div id="margin"></div>
+        </div>
+    </div>
+    <div id="bottom">
+    	<div class="bottom"><p>制作者：linsqqsee</p></div>
+    </div>
+</div>
+</body>
+</html>
