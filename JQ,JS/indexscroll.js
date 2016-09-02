@@ -3,8 +3,10 @@ window.j=0;
 	var jj;
 	window.i=$("body,html").height();
 
-	
 
+$(window).resize(function() {
+  window.i=$("body,html").height();
+});
 
 
 
